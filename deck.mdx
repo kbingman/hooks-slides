@@ -1,0 +1,172 @@
+import { CodeSurfer } from 'mdx-deck-code-surfer';
+import { Appear } from 'mdx-deck';
+
+import ListItem from './components/list-item';
+
+# Hooks
+
+---
+
+## Coming Soon (-ish) 
+_Available in React 16.8.0-alpha.1_
+
+---
+### A Quick Example
+
+---
+# `useState`
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/use-state.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+Hooks provide a more direct API to the React concepts you already know:  
+props, state, context, refs, and lifecycle. 
+
+---
+# Motivation
+
+---
+# It’s hard to reuse stateful logic between components
+
+React doesn’t offer a way to “attach” reusable behavior to a component. 
+Hooks allow you to reuse stateful logic without changing your component hierarchy
+
+---
+# Rules
+<ul>
+  <Appear>
+    <ListItem>Only Call Hooks at the Top Level</ListItem>
+    <ListItem>Only Call Hooks from React Functions (or Other Hooks)</ListItem>
+  </Appear>
+</ul>
+
+---
+# Stateful
+<ul>
+  <Appear>
+    <ListItem>Two components using the same Hook <i>do not</i> share state.</ListItem>
+    <ListItem>All state and effects inside of it are fully isolated.</ListItem>
+  </Appear>
+</ul>
+
+---
+# Examples
+
+---
+# `useRef`
+
+---
+<CodeSurfer
+  code={require("!raw-loader!./snippets/use-ref.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+/>
+
+---
+# `useReducer`
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/use-reducer.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/use-reducer-reducer.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+# `useEffect`
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/use-effect.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+# Custom Hooks
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/responsive.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/use-window-width.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+
+# Redux in the Age of Hooks
+
+<Appear>With React Hooks, we no longer need Redux, do we?</Appear>
+<Appear>There are still many reasons to use Redux and it's easy to integrate with hooks.</Appear>
+
+---
+
+# Redux Can Work with Hooks
+
+Because Redux uses the Context API, we can easily build a `useRedux` hook. 
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/use-redux.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+<div style={{}}>
+  <CodeSurfer
+    code={require("!raw-loader!./snippets/redux.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+  />
+</div>
+
+---
+# Resources
+
+* https://youtu.be/dpw9EHDh2bM
+* https://egghead.io/courses/simplify-react-apps-with-react-hooks
+
+
